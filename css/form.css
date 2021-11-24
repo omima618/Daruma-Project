@@ -1,0 +1,293 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-1);
+}
+:root {
+    --color-1: #eb7363;
+    --desc-color: #666666;
+    --heading-color: #333333;
+    --font-family-1: "Poppins", sans-serif;
+    --color-3: #2e347e;
+}
+a {
+    text-decoration: none;
+}
+.form {
+    width: 100%;
+    min-height: 100vh;
+    max-height: fit-content;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/form-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.form p {
+    color: var(--desc-color);
+    font-size: 14px;
+}
+.form #close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #eb736388;
+    font-size: 27px;
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.form #close:hover {
+    color: #eb7363;
+}
+@media (max-width: 768px) {
+    .form {
+        padding-top: 20px;
+    }
+    .form #close {
+        right: 15px;
+        top: 15px;
+    }
+}
+.form .signup {
+    display: none;
+}
+.form .form-style,
+.mobile-confirmition,
+.set-pass {
+    position: relative;
+    width: 350px;
+    padding: 20px;
+    background-color: #ffffffb3;
+    text-align: center;
+    box-shadow: 0 0 10px 0 #333;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.form-style .logo-form {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.form-style .logo-form svg {
+    cursor: pointer;
+}
+.form .form-style h2,
+.set-pass h2 {
+    color: #eb7363;
+    font-size: 27px;
+    font-weight: 600;
+    margin: 50px 0 25px;
+}
+.set-pass h2 {
+    margin: 30px 0;
+}
+.form .form-style .social i {
+    font-size: 20px;
+    color: var(--color-3);
+    cursor: pointer;
+    margin: 0 10px 15px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.form .form-style .social i:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.form .form-style .social + p,
+.forgot-pass p {
+    margin-bottom: 10px;
+}
+.form .login .forgot-pass p {
+    cursor: pointer;
+    margin-top: 10px;
+}
+.form .form-style p:last-of-type {
+    margin: 15px 0 0;
+}
+.form .form-style p:last-of-type span {
+    color: var(--color-1);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.form form div,
+.form .mobile-confirmition div,
+.form .set-pass div {
+    position: relative;
+}
+::placeholder {
+    color: var(--color-1);
+    font-size: 14px;
+}
+.form form div input,
+.form .mobile-confirmition div input,
+.form .set-pass div input {
+    display: block;
+    width: 85%;
+    height: 40px;
+    padding: 10px 10px 10px 35px;
+    margin: 10px auto;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #eb736365;
+    background-color: transparent;
+    color: var(--color-1);
+    font-size: 14px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--color-1);
+    transition: background-color 5000s ease-in-out 0s;
+}
+.form form div i,
+.form .mobile-confirmition div i,
+.form .set-pass div i {
+    position: absolute;
+    color: #eb7363d2;
+    font-size: 18px;
+    left: 9%;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.form .mobile-confirmition div i.check {
+    color: var(--desc-color);
+}
+.form form div .pass-show {
+    left: auto;
+    right: 9%;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--desc-color);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.form form div #pass-show1:hover,
+.form form div #pass-show2:hover,
+.form form div #pass-show3:hover,
+.form form div #pass-show4:hover {
+    color: var(--color-1);
+}
+#pass-hide1,
+#pass-hide2,
+#pass-hide3,
+#pass-hide4 {
+    display: none;
+    color: var(--color-1);
+}
+#pass-hide:hover {
+    color: var(--desc-color);
+}
+form input[type="submit"],
+.verify,
+.submit-pass {
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+    padding: 5px 30px;
+    background-color: var(--color-1);
+    color: white;
+    font-size: 16px;
+    border: transparent 1px solid;
+    outline: none;
+    border-radius: 26px;
+    -webkit-border-radius: 26px;
+    -moz-border-radius: 26px;
+    -ms-border-radius: 26px;
+    -o-border-radius: 26px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.submit-pass {
+    margin-top: 30px;
+}
+form input[type="submit"]:hover,
+.verify:hover,
+.submit-pass:hover {
+    background-color: transparent;
+    color: var(--color-1);
+    border-color: var(--color-1);
+}
+
+.set-pass,
+.mobile-confirmition {
+    display: none;
+}
+.send-code {
+    border: 1px solid var(--color-1);
+    padding: 5px 10px;
+    outline: none;
+    cursor: pointer;
+    color: var(--color-1);
+    font-size: 17px;
+    background-color: transparent;
+    margin-top: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+p.get-code {
+    margin-top: 20px;
+}
+span.resend {
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    color: var(--color-1);
+}
+.check-password {
+    position: absolute;
+    right: 19%;
+    font-size: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.check-password #correct-pass {
+    color: #00aa00;
+    font-size: 11px;
+}
+.check-password #wrong-pass {
+    color: red;
+    font-size: 11px;
+}
+p.pass-status {
+    display: none;
+    color: #00aa00;
+}
