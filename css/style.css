@@ -434,6 +434,7 @@ nav .user-list li:last-of-type {
     .container nav ul {
         display: none;
         position: absolute;
+        z-index: 10;
         flex-direction: column;
         top: 90%;
         left: 0;
@@ -889,7 +890,6 @@ footer .container .footer-content {
 footer .container .footer-content div {
     width: 30%;
 }
-
 footer .container .footer-content .footer-links {
     display: flex;
     justify-content: space-around;
@@ -900,10 +900,12 @@ footer .container .footer-content div .logo {
 }
 footer .container .footer-content div .social-media {
     margin-top: 20px;
-    width: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
 }
 footer .container .footer-content div .social-media a {
-    margin-right: 15px;
+    margin-right: 20px;
     font-size: 20px;
     color: var(--color-1);
 }
@@ -970,10 +972,18 @@ footer .container .rights span {
     }
 }
 @media (max-width: 768px) {
-    footer .container .footer-content div {
+    footer .container .footer-content > div {
         width: 80%;
     }
     footer .container .footer-content div .mail-inp {
         width: 70%;
+    }
+}
+@media (max-width: 550px) {
+    footer .container .footer-content > div {
+        width: 100%;
+    }
+    footer .container .footer-content div .mail-inp {
+        width: 100%;
     }
 }

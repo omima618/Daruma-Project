@@ -101,9 +101,7 @@ window.addEventListener("scroll", () => {
     }
 });
 // onclick all items show all items page
-let allItemsDiv = document.querySelector(".all-trend-items");
 let allItemsBtn = document.querySelector(".all-items");
-let trendItems = Array.from(document.querySelectorAll(".trend-img"));
 allItemsBtn.addEventListener("click", () => {
     window.open("trenditems.html", "_self");
 });
