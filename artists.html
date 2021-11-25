@@ -480,6 +480,23 @@
         lessArtBtn.addEventListener("click", () => {
             window.open("index.html", "_self");
         });
+let followBtn = document.querySelectorAll("button.follow");
+followBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        if (localStorage.getItem("userData")) {
+            if (btn.innerHTML === "Follow") {
+                btn.innerHTML = btn.dataset.text;
+                btn.style.backgroundColor = "#333";
+                btn.style.color = "white";
+            } else {
+                btn.innerHTML = "Follow";
+                btn.style.backgroundColor = "transparent";
+                btn.style.color = "#333";
+            }
+        } else {
+            Swal.fire("You are not a member!");
+        }
+    });
     </script>
 </body>
 
